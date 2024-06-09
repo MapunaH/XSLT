@@ -1,0 +1,1058 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TEI SYSTEM "DTD-fables.dtd">
+<?xml-model href="out/ODD_TEI-fables.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/ODD_TEI-fables.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-stylesheet type="text/xsl" href="../fables.xsl"?>
+<?xml-stylesheet type="text/xsl" href="../../../../XSLT/Devoir/marina/fables.xsl"?>
+<TEI version="3.3.0" xmlns="http://www.tei-c.org/ns/1.0">
+
+   <!-- HEADER DU TEXTE -->
+   <teiHeader>
+
+      <!-- Description bibliographique du fichier numérique ainsi que de sa source (physique ou non) -->
+      <fileDesc>
+
+
+         <!-- Titre et responsabilités liées au document encodé -->
+         <titleStmt>
+
+            <title>Moderniser les Fables de La Fontaine </title>
+
+            <author>
+               <orgName>École nationale des chartes</orgName>
+               <persName> Hervieu Marina</persName>
+            </author>
+
+            <respStmt>
+               <resp xml:id="encoder">Responsable à l'origine de l'encodage : </resp>
+               <persName>
+                  <forename>Marina</forename>
+                  <persName>Hervieu</persName>
+               </persName>
+            </respStmt>
+         </titleStmt>
+
+         <!-- Si cette publication est destinée à être publiée par les éditions de l'École. -->
+         <editionStmt>
+            <edition>
+               <name>Éditions de l'École nationale des chartes,</name>
+               <settlement type="city">Paris, </settlement>
+               <country xml:id="FR">France</country>
+            </edition>
+         </editionStmt>
+
+         <!-- Informations sur la publication/distribution du document numérique (l'encodage) -->
+         <publicationStmt>
+
+            <publisher>Master 2 - Technologies numériques appliquées à l'histoire à l'École
+               nationale des chartes.</publisher>
+            <pubPlace>
+               <address>
+                  <district type="arrondissement">2e</district>
+                  <street><num>65,</num> rue Richelieu</street>
+                  <postCode>75002</postCode>
+                  <settlement type="city">Paris</settlement>
+                  <country key="FR">France</country>
+               </address>
+            </pubPlace>
+            <date when-iso="2024-02-29" type="date">23 février 2023</date>
+
+         </publicationStmt>
+
+         <!-- Informations concernant la source dont est issue l'encodage -->
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title>Fables Choisies, mises en vers par</title>
+                  <author>
+                     <forename>Jean</forename>
+                     <surname>de La Fontaine (1621-1695)</surname>
+                  </author>
+                  <editor resp="contributor">Fables éditées par Claude Barbin, avec privilège du Roi
+                     Louis XIV et illustrées par François Chauveau, Graveur (1613-1676)</editor>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>Fables</publisher>
+                  <pubPlace>
+                     <address>
+                        <street>Palais sur le Perron de la sainte Chapelle.</street>
+                        <settlement type="city">Paris,</settlement>
+                        <country key="FR">France,</country>
+                     </address>
+                  </pubPlace>
+                  <date when-iso="1668">1668</date>
+                  <distributor facs="https://gallica.bnf.fr/ark:/12148/btv1b8610825d/f103.item">
+                     Gallica, Bibliothèque nationale de France</distributor>
+                  <availability>
+                     <licence
+                        target="https://gallica.bnf.fr/edit/und/conditions-dutilisation-des-contenus-de-gallica"
+                        >Domaine public</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title/>
+                  <biblScope unit="book" n="1">Livre Premier</biblScope>
+                  <!-- emplacement de la source dans l'oeuvre papier -->
+                  <biblScope unit="part" from="20" to="22">Fables XX, XXI, XXII</biblScope>
+                  <biblScope unit="page" from="43" to="48">pp.43-48</biblScope>
+               </seriesStmt>
+               <notesStmt>
+                  <note>Texte original imprimé par l'éditeur qui était aussi imprimeur au XVIIe
+                     siècle.</note>
+               </notesStmt>
+            </biblFull>
+
+         </sourceDesc>
+
+
+      </fileDesc>
+
+      <!-- Informations concernant l'encodage du texte: relation entre texte encodé et sa source (à préciser dans l'ODD)-->
+      <encodingDesc>
+
+
+         <projectDesc>
+            <p>Il s'agit d'une édition encodée et enrichie dans le cadre de l'évaluation de l'UE
+               "Edition scientifique, XML-TEI &amp; XSLT" pour le master 2 "Technologies numériques
+               appliquées à l'histoire" de l'École nationale des chartes. Cet encodage comparatif
+               des Fables de la Fontaine permet au lecteur d'observer l'évolution de la langue
+               française de l'ancien français du XVIIe siècle, la langue originale du texte, au
+               français moderne du XXIe siècle.</p>
+            <p>Les Fables choisies, mises en vers par M. de La Fontaine, appelées simplement Fables
+               de La Fontaine, sont trois recueils regroupant deux cent quarante-trois fables
+               allégoriques publiés par Jean de La Fontaine entre 1668 et 1694 poour la première
+               édition publiée par Ed. Barbin &amp; Thierry. Après la mort de l'auteur, les Fables
+               sont réeditées à de nombreuses reprises parmi les plus connus sont la deuxième
+               édition publiée en 1863 par Ed. Ch. Marty-Laveaux, se suivent deux nouvelles versions
+               par Ed. Bernadin-Bechet en 1874 puis Ed. Mane en 1897. Jusqu'au XXIe siècle, les
+               Fables font l'objet de nombreuses adaptations sur différents supports. </p>
+            
+         </projectDesc>
+
+
+         <editorialDecl>
+
+            <p>Le projet d’édition de cet encodage critique est la modernisation orthographique des
+               Fables de la Fontaine. L’édition a été réalisée par comparaison entre le texte
+               d'origine et une source déjà modernisée. Les similitudes n'ont pas été signalés,
+               seules les variances d'ordre orthographique et de ponctuation entre les versions sont
+               encodées. Voici les spécificités de l’encodage: </p>
+
+            <p>Il ne s’agit pas d’une étude sur la versification menée par La Fontaine. Bien
+               qu'intéressante, l’hétérométrie (utiliser des vers de différents mètres dans un même
+               poème) ne peut pas être étudiée à l’échelle de trois extraits dont la versification
+               varie beaucoup trop de l'un à l'autre. L'hétérométrie en devient donc contraignante.
+               En revanche, elle serait un sujet pertinent pour développer l’encodage à l'échelle de
+               toutes les Fables afin d’y analyser les règles de la métrique classique mélangées aux
+               mètres et rimes appliquées par de La Fontaine. La structuration du texte en
+               paragraphes, strophes, vers ou rimes et sauts de pages de la version originale a donc
+               été mise de côté dans le cadre de cet encodage. Pour celui-ci, on considère que les
+               différences orthographiques sont plus importantes que les différences de structure
+               des fables. Les spécificités des graphiesalors modernisées sont indiquées via les
+               entités qui permettent aux lecteurs, sur la même ligne, de lire en même temps les
+               différentes orthographiques appliquées aux mots et celles appliquées à la
+               ponctuation. Une telle lecture facilite l'observation de l'évolution de la langue
+               française.</p>
+
+            <correction status="medium" method="silent">
+               <p>A la relecture de l'encodage, les erreurs de transcriptions ont été détectées et
+                  corrigées manuellement. En voici quelques exemples: <list>
+                     <item>Fable XXII. l. 4: <corr>vent</corr><orig>vend</orig></item>
+                     <item>Fable XXII. l. 15:<corr>mais</corr><orig>mai</orig></item>
+                  </list></p>
+            </correction>
+
+            <quotation>
+               <p>Les éléments de la nature, faune ou flore, que l'auteur personnifie dialoguent à
+                  de nombreuses reprises. Pour les dialogues, la version originale n'indique pas de
+                  guillements pour les citations, elles sont seulement tabulées. La version
+                  modernisée ne respecte pas cet orthographe. </p>
+            </quotation>
+
+            <normalization method="silent">
+               <p>De part la personnification des éléments de la nature, où le roseau devient le
+                  personnage éponyme d'une fable, la version originale les indique avec une
+                  majuscule. La version modernisée les normalise en les ramenant à l'usage de la
+                  minuscle.</p>
+            </normalization>
+
+            <hyphenation eol="all">
+               <p>Les césures sont supprimées car l'édition diplomatique n'est pas l'objectif de cet
+                  encodage.</p>
+            </hyphenation>
+         </editorialDecl>
+      </encodingDesc>
+
+      <!-- Aspects non bibliographiques du texte numérique : langues, contexte de production, participants... -->
+      <profileDesc>
+
+
+         <creation>
+            <!-- informations sur la création du texte originel -->
+            <title>Fables</title>
+            <origDate from="1599" to="1700">XVIIe siècle</origDate>
+            <country key="FR">France</country>
+            <lang xml:id="fro">Ancien français</lang>
+         </creation>
+      </profileDesc>
+
+
+      <!-- Historique des modifications -->
+      <revisionDesc>
+
+
+         <!-- Répéter l'élément autant que nécessaire -->
+         <change when="2023-11-25" who="#encoder">Création du fichier d'encodage</change>
+         <change when="2023-12-02">Encodage de la structure du fichier</change>
+         <change when="2023-12-09">Début de l'encodage des fables</change>
+         <change when="2023-12-16">Suite de l'encodage des fables</change>
+         <change when="2024-01-02">Suite de l'encodage des fables</change>
+         <change when="2024-01-03">Encodage du teiHeader</change>
+         <change when="2024-01-04">Encodage de la DTD</change>
+         <change when="2024-01-13">Relecture des élements, attributs, entités (DTD)</change>
+         <change when="2024-02-17">Fin de l'encodage des fables et du teiHeader</change>
+         <change when="2024-02-20">Relecture et corrections mineures</change>
+         <change when="2024-02-22">Commenter l'encodage</change>
+
+
+      </revisionDesc>
+
+   </teiHeader>
+
+   <!-- Début de l'encodage -->
+   <text>
+      <body>
+         <div type="part" n="20">
+            <head type="number" rend="alignCenter"> FABLE <choice>
+                  <orig>VINGTIESME</orig>
+                  <reg>VINGTIEME</reg>
+               </choice>. </head>
+            <head type="title" rend="alignCenter">Le Coq &amp; la perle.</head>
+
+            <l><hi rend="color(orange) case(caps)">U</hi>n jour un <rs nymRef="#COQ"><choice>
+                     <orig>Coq</orig>
+                     <reg>coq</reg>
+                  </choice></rs><rs nymRef="#PROFIT"> détourna</rs></l>
+            <l>Une <rs nymRef="#PERLE"><choice>
+                     <orig>Perle</orig>
+                     <reg>perle</reg>
+                  </choice></rs> qu’il donna</l>
+            <l>Au beau <rs nymRef="#EMPHASE">premier</rs>
+               <choice>
+                  <orig>Lapidaire</orig>
+                  <reg>lapidaire</reg>
+               </choice>:</l>
+            <l>Je la crois fine, dit-il<choice>
+                  <orig>;</orig>
+                  <reg>,</reg>
+               </choice></l>
+            <l>Mais le moindre grain de <choice>
+                  <orig>Mil</orig>
+                  <reg>mil</reg>
+               </choice></l>
+            <l><choice>
+                  <orig>Seroit</orig>
+                  <reg>serait</reg>
+               </choice> bien mieux mon affaire.</l>
+            <l>Un ignorant <choice>
+                  <orig>herita</orig>
+                  <reg>hérita</reg>
+               </choice></l>
+            <l>D’un <choice>
+                  <orig>Manuſcrit</orig>
+                  <reg>manuscrit</reg>
+               </choice> qu’il porta</l>
+            <l>Chez <choice>
+                  <orig>ſon</orig>
+                  <reg>son</reg>
+               </choice>
+               <choice>
+                  <orig>voiſin</orig>
+                  <reg>voisin</reg>
+               </choice> le <choice>
+                  <orig>Libraire</orig>
+                  <reg>libraire</reg>
+               </choice><choice>
+                  <orig>;</orig>
+                  <reg>.</reg>
+               </choice></l>
+            <l>Je crois, dit-il, qu’il <choice>
+                  <orig>eſt</orig>
+                  <reg>est</reg>
+               </choice> bon ;</l>
+            <l>Mais le moindre <rs nymRef="#DUCATON"><choice>
+                     <orig>Ducaton</orig>
+                     <reg>ducaton</reg>
+                  </choice></rs></l>
+            <l><choice>
+                  <orig>Seroit</orig>
+                  <reg>serait</reg>
+               </choice> bien mieux mon affaire.</l>
+         </div>
+
+         <div type="part" n="21">
+            <head type="number" rend="alignCenter">FABLE <choice>
+                  <orig>VINGT-UNIESME</orig>
+                  <reg>VINGT-ET-UNIEME</reg>
+               </choice></head>
+            <head type="title" rend="alignCenter">Les <rs nymRef="#FRELONS">Frelons</rs> &amp; les
+                  <rs nymRef="#MOUCHES">mouches</rs> à miel.</head>
+
+            <l><hi rend="color(orange) case(caps)">A </hi>l'<choice>
+                  <orig>oeuvre</orig>
+                  <reg>œuvre</reg>
+               </choice> on <choice>
+                  <orig>connoiſt</orig>
+                  <reg>connait</reg>
+               </choice> l’<choice>
+                  <orig>Artiſan</orig>
+                  <reg>artisan</reg>
+               </choice>.</l>
+            <l>Quelques rayons de miel <choice>
+                  <orig>ſans</orig>
+                  <reg>sans</reg>
+               </choice>
+               <choice>
+                  <orig>maiſtre</orig>
+                  <reg>maître</reg>
+               </choice>
+               <choice>
+                  <orig>ſe</orig>
+                  <reg>se</reg>
+               </choice>
+               <choice>
+                  <orig>trouverent</orig>
+                  <reg>trouvèrent</reg>
+               </choice><choice>
+                  <orig>:</orig>
+                  <reg>,</reg>
+               </choice></l>
+            <l>Des <rs nymRef="#FRELONS"><choice>
+                     <orig>Frelons</orig>
+                     <reg>frelons</reg>
+                  </choice></rs> les <choice>
+                  <orig>reclamerent</orig>
+                  <reg>réclamèrent</reg>
+               </choice>, </l>
+            <l>Des <rs nymRef="#ABEILLE"><choice>
+                     <orig>Abeilles</orig>
+                     <reg>abeilles</reg>
+                  </choice></rs>
+               <rs nymRef="#OPPOSITION"><choice>
+                     <orig>s'oppoſant</orig>
+                     <reg>s'opposant</reg>
+                  </choice></rs>,</l>
+            <l>Devant certaine <rs nymRef="#GUEPE"><choice>
+                     <orig>Guefpe</orig>
+                     <reg>guêpe</reg>
+                  </choice></rs> on <choice>
+                  <orig>traduiſit</orig>
+                  <reg>traduisit</reg>
+               </choice> la <choice>
+                  <orig>causſe</orig>
+                  <reg>cause</reg>
+               </choice>. </l>
+            <l>Il <choice>
+                  <orig>eftoit</orig>
+                  <reg>était</reg>
+               </choice>
+               <choice>
+                  <orig>mal-aiſe</orig>
+                  <reg>mal-aisé</reg>
+               </choice> de décider la <choice>
+                  <orig>choſe</orig>
+                  <reg>chose</reg>
+               </choice> : </l>
+            <l>Les témoins <choice>
+                  <orig>dépoſoient</orig>
+                  <reg>déposaient</reg>
+               </choice> qu’autour de ces rayons </l>
+            <l>Des animaux <choice>
+                  <orig>apilez</orig>
+                  <reg>aîlés</reg>
+               </choice>, <choice>
+                  <orig>bourdonnan</orig>
+                  <reg>bourdonnants</reg>
+               </choice>, un peu longs,</l>
+            <l>De couleur fort <rs nymRef="#TAN">tannée </rs>; &amp; tels que les <rs
+                  nymRef="#ABEILLE"><choice>
+                     <orig>Abeilles</orig>
+                     <reg>abeilles</reg>
+                  </choice></rs>, </l>
+            <l><choice>
+                  <orig>Avoient</orig>
+                  <reg>Avaient</reg>
+               </choice>
+               <choice>
+                  <orig>long-temps</orig>
+                  <reg>longtemps</reg>
+               </choice> paru: Mais <choice>
+                  <orig>quoy</orig>
+                  <reg>quoi</reg>
+               </choice>, dans les <rs nymRef="#FRELONS"><choice>
+                     <orig>Frelons</orig>
+                     <reg>frelons</reg>
+                  </choice></rs>
+            </l>
+            <l>Ces <rs nymRef="#SIGNES"><choice>
+                     <orig>enſeignes</orig>
+                     <reg>enseignes</reg>
+                  </choice></rs>
+               <choice>
+                  <orig>eſtoient</orig>
+                  <reg>étaient</reg>
+               </choice> pareilles. </l>
+            <l>La <rs nymRef="#GUEPE"><choice>
+                     <orig>Guefpe</orig>
+                     <reg>guêpe</reg>
+                  </choice></rs> ne <choice>
+                  <orig>fachant</orig>
+                  <reg>sachant</reg>
+               </choice> que dire à ces <choice>
+                  <orig>raifons</orig>
+                  <reg>raisons</reg>
+               </choice>, </l>
+            <l>Fit <choice>
+                  <orig>enquefte</orig>
+                  <reg>enquête</reg>
+               </choice> nouvelle ; &amp; pour plus de lumière, </l>
+            <l>Entendit une <choice>
+                  <orig>fourmilliere</orig>
+                  <reg>fourmillière</reg>
+               </choice><choice>
+                  <orig>;</orig>
+                  <reg>.</reg>
+               </choice></l>
+            <l>Le <choice>
+                  <orig>poinet</orig>
+                  <reg>poignet</reg>
+               </choice> n’en pût <choice>
+                  <orig>eftre</orig>
+                  <reg>être</reg>
+               </choice>
+               <choice>
+                  <orig>éclaircy</orig>
+                  <reg>éclairci</reg>
+               </choice>. </l>
+            <l>De <choice>
+                  <orig>grace</orig>
+                  <reg>grâce</reg>
+               </choice>
+               <choice>
+                  <orig>A</orig>
+                  <reg>à</reg>
+               </choice>
+               <choice>
+                  <orig>quoy</orig>
+                  <reg>quoi</reg>
+               </choice> bon tout <choice>
+                  <orig>cecy</orig>
+                  <reg>ceci</reg>
+               </choice> ? </l>
+            <l>Dit une <rs nymRef="#ABEILLE"><choice>
+                     <orig>Abeilles</orig>
+                     <reg>abeilles</reg>
+                  </choice></rs> fort prudente<choice>
+                  <orig>:</orig>
+                  <reg>;</reg>
+               </choice></l>
+            <l>Depuis <choice>
+                  <orig>tantoft</orig>
+                  <reg>tantôt</reg>
+               </choice>
+               <choice>
+                  <orig>ſix</orig>
+                  <reg>six</reg>
+               </choice> mois que la <choice>
+                  <orig>Cauſe</orig>
+                  <reg>cause</reg>
+               </choice>
+               <choice>
+                  <orig>eſt</orig>
+                  <reg>est</reg>
+               </choice>
+               <rs nymRef="#SUSPENS">pendante</rs>,</l>
+            <l>Nous <choice>
+                  <orig>voicy</orig>
+                  <reg>voici</reg>
+               </choice> comme aux premiers jours ; </l>
+            <l>Pendant cela le miel <choice>
+                  <orig>ſe</orig>
+                  <reg>se</reg>
+               </choice>
+               <choice>
+                  <orig>gaſte</orig>
+                  <reg>gâte</reg>
+               </choice>. </l>
+            <l>Il <choice>
+                  <orig>eſt</orig>
+                  <reg>est</reg>
+               </choice> temps <choice>
+                  <orig>déſormais</orig>
+                  <reg>désormais</reg>
+               </choice> que le <choice>
+                  <orig>Juge</orig>
+                  <reg>juge</reg>
+               </choice>
+               <choice>
+                  <orig>ſe</orig>
+                  <reg>se</reg>
+               </choice>
+               <choice>
+                  <orig>haſte</orig>
+                  <reg>hâte</reg>
+               </choice>: </l>
+            <l>N’a-t-il point <choice>
+                  <orig>aſſez</orig>
+                  <reg>assez</reg>
+               </choice> léché l’<rs nymRef="#RABELAIS"><choice>
+                     <orig>Ours</orig>
+                     <reg>ours</reg>
+                  </choice></rs> ?</l>
+            <l>Sans tant de contredits, &amp; d’interlocutoires, </l>
+            <l>Et de fatras, &amp; de grimoires, </l>
+            <l>Travaillons, les <rs nymRef="#FRELONS"><choice>
+                     <orig>Frelons</orig>
+                     <reg>frelons</reg>
+                  </choice></rs> &amp; nous : </l>
+            <l>On verra qui <choice>
+                  <orig>ſait</orig>
+                  <reg>sait</reg>
+               </choice> faire un <choice>
+                  <orig>ſuc</orig>
+                  <reg>suc</reg>
+               </choice>
+               <choice>
+                  <orig>ſi</orig>
+                  <reg>si</reg>
+               </choice>
+               <choice>
+                  <orig/>
+                  <reg>,</reg>
+               </choice></l>
+            <l>Des cellules <choice>
+                  <orig>ſi</orig>
+                  <reg>si</reg>
+               </choice> bien <choice>
+                  <orig>baſties</orig>
+                  <reg>bâties</reg>
+               </choice>. </l>
+            <l>Le refus des <rs nymRef="#FRELONS"><choice>
+                     <orig>Frelons</orig>
+                     <reg>frelons</reg>
+                  </choice></rs> fit voir </l>
+            <l>Que cet art <choice>
+                  <orig>paſſoit</orig>
+                  <reg>passait</reg>
+               </choice> leur <choice>
+                  <orig>ſçavoir</orig>
+                  <reg>savoir</reg>
+               </choice> : </l>
+            <l>Et la <rs nymRef="#GUEPE"><choice>
+                     <orig>Guefpe</orig>
+                     <reg>guêpe</reg>
+                  </choice></rs> adjugea le miel à leurs parties</l>
+            <l><choice>
+                  <orig>Pleuft</orig>
+                  <reg>Plût</reg>
+               </choice>-à-Dieu qu’on <choice>
+                  <orig>reglaft</orig>
+                  <reg>régla</reg>
+               </choice>
+               <choice>
+                  <orig>ainfi</orig>
+                  <reg>ainsi</reg>
+               </choice> tous les <choice>
+                  <orig>procez</orig>
+                  <reg>procès</reg>
+               </choice> !</l>
+            <l>Que des <rs nymRef="#TURCS">Turcs</rs> en cela l’on <choice>
+                  <orig>fuivift</orig>
+                  <reg>suivît</reg>
+               </choice> la <choice>
+                  <orig>methode</orig>
+                  <reg>méthode</reg>
+               </choice> ! </l>
+            <l>Le <choice>
+                  <orig>fimple</orig>
+                  <reg>simple</reg>
+               </choice>
+               <choice>
+                  <orig>fens</orig>
+                  <reg>sens</reg>
+               </choice> commun nous <choice>
+                  <orig>tiendroit</orig>
+                  <reg>tiendrait</reg>
+               </choice> lieu de Code, </l>
+            <l>Il ne <choice>
+                  <orig>draudroit</orig>
+                  <reg>faudrait</reg>
+               </choice> point tant de frais <choice>
+                  <orig>:</orig>
+                  <reg>;</reg>
+               </choice></l>
+            <l>Au lieu qu’on nous mange, on nous gruge, </l>
+            <l>On nous mine par des longueurs : </l>
+            <l>On fait tant à la fin que l’<rs nymRef="#REFERENCE"><rs nymRef="#HUITRE"><choice>
+                        <orig>huiftre</orig>
+                        <reg>huître</reg>
+                     </choice></rs></rs>
+               <choice>
+                  <orig>eft</orig>
+                  <reg>est</reg>
+               </choice> pour le <choice>
+                  <orig>Juge</orig>
+                  <reg>juge</reg>
+               </choice>, </l>
+            <l>Les écailles pour les plaideurs.</l>
+         </div>
+
+         <div type="part" n="22">
+            <head type="number" rend="alignCenter">FABLE VINGT-DEUXIE&S;ME.</head>
+            <head type="title" rend="alignCenter">Le <rs nymRef="#CHENE">Chêne</rs> &amp; le 
+               <rs nymRef="#ROSEAU">Roseau</rs>.</head>
+
+            <l><hi rend="color(orange) case(caps)">L</hi>e <rs nymRef="#CHENE"><choice>
+                     <orig>Cheſne</orig>
+                     <reg>Chêne</reg>
+                  </choice></rs> un jour dit au <rs nymRef="#ROSEAU"><choice>
+                     <orig>Roſeau</orig>
+                     <reg>Roseau</reg>
+                  </choice></rs> :</l>
+            <l>Un <rs nymRef="#ROITELET"><choice>
+                     <orig>Roitelet</orig>
+                     <reg>roitelet</reg>
+                  </choice></rs> pour vous <choice>
+                  <orig>eſt</orig>
+                  <reg>est</reg>
+               </choice> un <choice>
+                  <orig>peſant</orig>
+                  <reg>pesant</reg>
+               </choice> fardeau.</l>
+            <l>Le moindre vent qui d’<rs nymRef="#HASARD">aventure</rs></l>
+            <l>Fait rider la face de l’eau<choice>
+                  <orig/>
+                  <reg>,</reg>
+               </choice></l>
+            <l>Vous oblige à <choice>
+                  <orig>baiſſer</orig>
+                  <reg>baisser</reg>
+               </choice> la <choice>
+                  <orig>teſte</orig>
+                  <reg>tête</reg>
+               </choice> :</l>
+            <l>Cependant que mon front au <choice>
+                  <orig>Caucaſe</orig>
+                  <reg>Caucase</reg>
+               </choice> pareil,</l>
+            <l>Non content <choice>
+                  <orig>d'arreſter</orig>
+                  <reg>d'arrêter</reg>
+               </choice> les rayons du <choice>
+                  <orig>Soleil</orig>
+                  <reg>soleil</reg>
+               </choice>,</l>
+            <l>Brave l’effort de la <choice>
+                  <orig>tempeſte</orig>
+                  <reg>tempête</reg>
+               </choice>.</l>
+            <l>Tout vous <choice>
+                  <orig>eſt</orig>
+                  <reg>est</reg>
+               </choice>
+               <rs nymRef="#AQUILON">Aquilon</rs> ; tout me semble <rs nymRef="#ZEPHYR"><choice>
+                     <orig>Zephir</orig>
+                     <reg>Zéphyr</reg>
+                  </choice></rs>.</l>
+            <l><choice>
+                  <orig>Encor</orig>
+                  <reg>Encore</reg>
+               </choice>
+               <choice>
+                  <orig>ſi</orig>
+                  <reg>si</reg>
+               </choice> vous <choice>
+                  <orig>naiſſier</orig>
+                  <reg>naissiez</reg>
+               </choice> à <choice>
+                  <orig>l'abry</orig>
+                  <reg>l'abri</reg>
+               </choice> du <choice>
+                  <orig>feüillage</orig>
+                  <reg>feuillage</reg>
+               </choice></l>
+            <l>Dont je couvre le <choice>
+                  <orig>voiſinage</orig>
+                  <reg>voisinage</reg>
+               </choice><choice>
+                  <orig>;</orig>
+                  <reg>,</reg>
+               </choice></l>
+            <l>Vous n’auriez pas tant à <choice>
+                  <orig>ſouffrir</orig>
+                  <reg>souffrir</reg>
+               </choice>
+               <choice>
+                  <orig>;</orig>
+                  <reg>:</reg>
+               </choice></l>
+            <l>Je vous <choice>
+                  <orig>deſſendrois</orig>
+                  <reg>défendrais</reg>
+               </choice> de l’orage <choice>
+                  <orig>:</orig>
+                  <reg>;</reg>
+               </choice></l>
+            <l>Mais vous <choice>
+                  <orig>naiſſez</orig>
+                  <reg>naissez</reg>
+               </choice> le plus <choice>
+                  <orig>ſouvent</orig>
+                  <reg>souvent</reg>
+               </choice></l>
+            <l>Sur les humides bords des <choice>
+                  <orig>Royaumes</orig>
+                  <reg>royaumes</reg>
+               </choice> du vent.</l>
+            <l>La Nature envers vous me <choice>
+                  <orig>ſemble</orig>
+                  <reg>semble</reg>
+               </choice> bien <choice>
+                  <orig>injuſte</orig>
+                  <reg>injuste</reg>
+               </choice>.</l>
+            <l><choice>
+                  <orig>Voſtre</orig>
+                  <reg>Votre</reg>
+               </choice>
+               <choice>
+                  <orig>compaſſioner</orig>
+                  <reg>compassion</reg>
+               </choice> , <choice>
+                  <orig>luy</orig>
+                  <reg>lui</reg>
+               </choice> répondit l’<rs nymRef="#ARBUSTE"><choice>
+                     <orig>arbuſte</orig>
+                     <reg>arbuste</reg>
+                  </choice></rs>, </l>
+            <l>Part d’un bon naturel ; mais vous quittez ce <choice>
+                  <orig>ſoucy</orig>
+                  <reg>souci</reg>
+               </choice><choice>
+                  <orig>;</orig>
+                  <reg>.</reg>
+               </choice></l>
+            <l>Les vents me <choice>
+                  <orig>ſont</orig>
+                  <reg>sont</reg>
+               </choice> moins qu’à vous redoutables<choice>
+                  <orig/>
+                  <reg>.</reg>
+               </choice></l>
+            <l>Je plie <choice>
+                  <orig>&amp;</orig>
+                  <reg>et</reg>
+               </choice> ne romps pas<choice>
+                  <orig>;</orig>
+                  <reg>.</reg>
+               </choice> Vous avez <choice>
+                  <orig>juſqu'icy</orig>
+                  <reg>jusqu'ici</reg>
+               </choice></l>
+            <l>Contre leurs coups épouvantables </l>
+            <l><choice>
+                  <orig>Reſiſté</orig>
+                  <reg>Resisté</reg>
+               </choice>
+               <choice>
+                  <orig>ſans</orig>
+                  <reg>sans</reg>
+               </choice> courber le dos <choice>
+                  <orig>:</orig>
+                  <reg>;</reg>
+               </choice></l>
+            <l>Mais attendons la fin. Comme il <choice>
+                  <orig>diſoit</orig>
+                  <reg>disait</reg>
+               </choice> ces mots <choice>
+                  <orig>;</orig>
+                  <reg>,</reg>
+               </choice></l>
+            <l>Du bout de l’<choice>
+                  <orig>Orizon</orig>
+                  <reg>horizon</reg>
+               </choice> accourt avec furie</l>
+            <l>Le plus terrible des <choice>
+                  <orig>enfans</orig>
+                  <reg>enfants</reg>
+               </choice></l>
+            <l>Que le <choice>
+                  <orig>Nort</orig>
+                  <reg>Nord</reg>
+               </choice>
+               <choice>
+                  <orig>euſt</orig>
+                  <reg>eût</reg>
+               </choice> porté <choice>
+                  <orig>juſques-là</orig>
+                  <reg>jusque-là</reg>
+               </choice> dans <choice>
+                  <orig>ſes</orig>
+                  <reg>ses</reg>
+               </choice> flancs.</l>
+            <l>L’<rs nymRef="#ARBRE"><choice>
+                     <orig>Arbre</orig>
+                     <reg>arbre</reg>
+                  </choice></rs> tient bon ; le <rs nymRef="#ROSEAU"><choice>
+                     <orig>Roſeau</orig>
+                     <reg>Roseau</reg>
+                  </choice></rs> plie<choice>
+                  <orig>:</orig>
+                  <reg>.</reg>
+               </choice></l>
+            <l>Le vent redouble <choice>
+                  <orig>ſes</orig>
+                  <reg>ses</reg>
+               </choice> efforts,</l>
+            <l>Et fait <choice>
+                  <orig>ſi</orig>
+                  <reg>si</reg>
+               </choice> bien qu’il déracine</l>
+            <l><choice>
+                  <orig>Celuy</orig>
+                  <reg>Celui</reg>
+               </choice> de qui la <choice>
+                  <orig>teſte</orig>
+                  <reg>tête</reg>
+               </choice> au Ciel <choice>
+                  <orig>etoit</orig>
+                  <reg>était</reg>
+               </choice> <rs nymRef="#VOISINE"><choice>
+                     <orig>voiſine</orig>
+                     <reg>voisine</reg>
+                  </choice></rs>,</l>
+            <l>Et dont les pieds <choice>
+                  <orig>touchoient</orig>
+                  <reg>touchaient</reg>
+               </choice> à l’<rs nymRef="#VIRGILE">empire des morts</rs>.</l>
+         </div>
+      </body>
+   </text>
+
+   <!-- INDEX pour expliciter le contenu de la fable -->
+   <standOff>
+      <!-- Liste des éléments de la nature personnifiée -->
+      <listNym type="NATURE">
+         <nym xml:id="COQ">
+            <orth xml:lang="fr">coq</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/coq/19167">Oiseau
+               domestique, mâle de la poule.Les coqs sont voisins des faisans, dont ils ne diffèrent
+               que par le plus grand développement des caroncules [crête et barbillons] et de la
+               queue. Le coq bankiva est la souche des races domestiques.</def>
+            <lbl>Homme ardent en amour.</lbl>
+         </nym>
+         <nym xml:id="PERLE">
+            <orth xml:lang="fr">perle</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/perle/59654">Concrétion
+               nacrée, le plus souvent sphérique, qui se forme entre la coquille et le manteau de
+               certains mollusques.</def>
+            <lbl>Ce qu'il y a de mieux en son genre.</lbl>
+         </nym>
+         <nym xml:id="FRELONS">
+            <orth xml:lang="fr">frelons</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/frelon/35170">Grosse guêpe
+               d'Europe, rousse et jaune, au nid fait de bois mâché et enduit de salive, très
+               nuisible aux fruits et dont la piqûre peut être dangereuse.</def>
+            <lbl source="http://www.la-fontaine-ch-thierry.net/frelonsm.htm"> Aussi utilisé pour
+               dénommer les mâles des abeilles, qui ne travaillent nullement dans la ruche </lbl>
+         </nym>
+         <nym xml:id="MOUCHES">
+            <orth xml:lang="fro">moûches</orth>
+            <orth xml:lang="fr">mouches</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/mouche/52851"> Insecte
+               diptère aux formes trapues, au vol bourdonnant et zigzaguant, aux antennes courtes,
+               aux balanciers recouverts d'un cuilleron ; plus particulièrement insecte des familles
+               des muscidés ou des calliphoridés.</def>
+            <lbl source="https://www.larousse.fr/dictionnaires/francais/mouche/52851">Petit morceau
+               de taffetas noir que les dames des xviie et xviiie s. se mettaient sur le
+               visage.</lbl>
+         </nym>
+         <nym xml:id="ABEILLE">
+            <orth xml:lang="fr">abeille</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/abeille/87">Insecte
+               hyménoptère social (apidé) dont certaines espèces sont l'objet d'un élevage
+               (apiculture) pour la récolte du miel et de la cire élaborée par une colonie hébergée
+               dans une ruche.</def>
+         </nym>
+         <nym xml:id="GUEPE">
+            <orth xml:lang="fro">guefpe</orth>
+            <orth xml:lang="fr">guêpe</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/gu%C3%AApe/38501"> Insecte
+               hyménoptère social à l'abdomen annelé de jaune et de noir, dont la femelle est
+               pourvue d'un aiguillon venimeux.</def>
+         </nym>
+
+         <nym xml:id="HUITRE">
+            <orth xml:lang="fro">huiftre</orth>
+            <orth xml:lang="fr">huître</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/hu%C3%AEtre/40600">Mollusque
+               marin bivalve, comestible, fixé aux rochers marins par une valve de sa coquille, dont
+               on fait l'élevage (ostréiculture) dans des parcs et dont les espèces (belon,
+               portugaise, etc.) sont surtout consommées pendant les « mois en r » (de septembre à
+               avril), hors période de reproduction.</def>
+            <lbl source="https://www.larousse.fr/dictionnaires/francais/hu%C3%AEtre/40600">Personne
+               sotte et stupide.</lbl>
+         </nym>
+
+         <nym xml:id="CHENE">
+            <orth xml:lang="fro">chefne</orth>
+            <orth xml:lang="fr">chêne</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/ch%C3%AAne/15095">Arbre
+               capable d'une grande longévité, aux fruits (glands) enchâssés dans une cupule, et
+               commun dans toute l'Europe de l'Ouest et en Amérique du Nord, tant dans les forêts
+               naturelles que dans celles où les sylviculteurs l'ont semé ou planté.</def>
+         </nym>
+
+         <nym xml:id="ROSEAU">
+            <orth xml:lang="fro">rofeau</orth>
+            <orth xml:lang="fr">roseau</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/roseau/69884">Nom usuel
+               commun à de nombreuses plantes monocotylédones rhizomateuses du bord des eaux
+               calmes.</def>
+            <lbl source="https://www.larousse.fr/dictionnaires/francais/roseau/69884">Symbole de la
+               faiblesse, de la fragilité de l'être-humain.</lbl>
+         </nym>
+
+         <nym xml:id="ROITELET">
+            <def source="https://www.larousse.fr/dictionnaires/francais/roitelet/69732">Très petit
+               passereau (régulidé ou muscicapidé selon les auteurs) chanteur (de 8 à 9 cm), au
+               plumage gris-vert marqué de taches noires et d'un bandeau jaune-orangé sur la tête.
+               (Le roitelet huppé est commun en France. Il gagne les régions méditerranéennes en
+               hiver. On appelle parfois à tort « roitelet » le troglodyte.)</def>
+         </nym>
+
+         <nym xml:id="AQUILON">
+            <orth xml:lang="fr">aquilon</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/aquilon/4885">Vent du nord,
+               fort et froid.</def>
+         </nym>
+
+         <nym xml:id="ZEPHYR">
+            <orth xml:lang="fro">Zephir</orth>
+            <orth xml:lang="fr">zéphyr</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/z%C3%A9phyr/83094">Vent doux
+               et agréable d'ouest.</def>
+         </nym>
+
+         <nym xml:id="ARBUSTE">
+            <orth xml:lang="fro">arbufte</orth>
+            <orth xml:lang="fr">arbuste</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/arbuste/4978">Plante
+               ligneuse vivace ne dépassant pas 10 m de hauteur et dont le tronc n'est pas ramifié
+               dès la base. (Un arbuste jeune a le port d'un arbrisseau, puis il acquiert celui d'un
+               arbre par perte des branches les plus basses.) </def>
+         </nym>
+
+         <nym xml:id="ARBRE">
+            <orth xml:lang="fr">arbre</orth>
+            <def source="https://www.larousse.fr/dictionnaires/francais/arbre/4974">Végétal vivace,
+               ligneux, rameux, atteignant au moins 7 m de hauteur et ne portant de branches
+               durables qu'à une certaine distance du sol.</def>
+         </nym>
+
+      </listNym>
+
+      <!-- Liste des sous-entendus, références  -->
+      <listNym type="dictionnary">
+         <nym xml:id="PROFIT">
+            <orth xml:lang="fr">détourna</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">Veut dire mit de côté, à
+               son profit.</def>
+         </nym>
+
+         <nym xml:id="EMPHASE">
+            <orth xml:lang="fr">premier</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">Cela renforce le sens de
+               premier ; on dirait maintenant : au tout premier.</def>
+         </nym>
+
+         <nym xml:id="DUCATON">
+            <orth xml:lang="fr">ducaton</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">Le ducat étant une
+               monnaie frappée par des ducs, le demi-ducat ou ducat d'argent (le ducat était en or)
+               représente un demi-duc. La monnaie était fabriquée en particulier à Venise de 1284 à
+               1797 et aussi il existait des ducatons de Hollande.</def>
+         </nym>
+
+         <nym xml:id="OPPOSITION">
+            <orth xml:lang="fr">s'opposant</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/frelonsm.htm">Faire opposition étant
+               un terme juridique.</def>
+         </nym>
+
+         <nym xml:id="TAN">
+            <orth xml:lang="fr">tannée</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/frelonsm.htm">Le tan est un produit
+               brun rougeâtre issu de l'écorcedu chêne après broyage et servant au tannage des
+               peaux. Ici, de la couleur du tan.</def>
+         </nym>
+
+         <nym xml:id="SIGNES">
+            <orth xml:lang="fr">enseignes</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/frelonsm.htm">Ces signes, ces marques
+               distinctives.</def>
+         </nym>
+
+         <nym xml:id="SUSPENS">
+            <orth xml:lang="fr">pendante</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">En suspens</def>
+         </nym>
+
+         <nym xml:id="RABELAIS">
+            <orth xml:lang="fr">l'ours</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">C'est une allusion à un
+               passage du Tiers livre" de Rabelais où l'on voit le juge Bridoye comparer la
+               naissance et l'évolution des procès à celles des ours qui, au départ, sont des boules
+               informes, que leur mère transforme en animaux auxquels les membres et les formes
+               apparaissent, à force de léchages.></def>
+         </nym>
+
+         <nym xml:id="TURCS">
+            <orth xml:lang="fr">Turcs</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">Conotation xénophobe
+               datant du XVIIe siècle où le peuple turc avait la réputation d'être expéditif.</def>
+         </nym>
+
+         <nym xml:id="REFERENCE">
+            <orth xml:lang="fr">l'huître</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/coqperl.htm">Il pourrait s'agir d'une
+               référence à la fable "l'huître et les plaideurs" mais elle ne paraîtra
+               qu'ultérieurement au Livre I.</def>
+         </nym>
+
+         <nym xml:id="SUJET">
+            <orth xml:lang="fr">sujet</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/chenroso.htm">Synonymes de motifs
+               pour.</def>
+         </nym>
+
+         <nym xml:id="HASARD">
+            <orth xml:lang="fr">aventure</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/chenroso.htm">Par hasard</def>
+         </nym>
+
+         <nym xml:id="VOISINE">
+            <orth xml:lang="fr">voisine</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/chenroso.htm">A comprendre : celui
+               dont la tête était voisine du ciel</def>
+         </nym>
+
+         <nym xml:id="VIRGILE">
+            <orth xml:lang="fr">empire des morts</orth>
+            <def source="http://www.la-fontaine-ch-thierry.net/chenroso.htm">Plusieurs expressions
+               sont tirées de Virgile dans cette fable.</def>
+         </nym>
+
+      </listNym>
+   </standOff>
+</TEI>
